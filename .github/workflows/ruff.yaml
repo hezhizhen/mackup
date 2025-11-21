@@ -6,7 +6,6 @@ on:
   pull_request:
 
 jobs:
-
   ruff:
     runs-on: ubuntu-latest
     steps:
@@ -14,3 +13,4 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - run: uv sync --all-extras --dev
       - run: uv run ruff check .
+      - run: uv run ruff format --check

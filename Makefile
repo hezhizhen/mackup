@@ -30,3 +30,4 @@ release: clean
 
 ruff:
 	ruff check .
+	ruff format --check
